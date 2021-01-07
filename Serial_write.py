@@ -1,12 +1,14 @@
 import serial, time
 
-ser = serial.Serial('COM48', 115200, timeout=0, parity=serial.PARITY_NONE, rtscts=1)  # open serial port
+#Abrir puerto serie parametrizando
+ser = serial.Serial('COM48', 115200, timeout=0, parity=serial.PARITY_NONE, rtscts=1)
 print("connected to: " + ser.portstr)
 
-ser.write("3\r\n".encode())
-print(b'0x31')
+#Enviar el string "3"
+ser.write("3\r\n".encode()) #meter encode para codificar el string de texto enviado
 
-ser.close()             # close port
+# close port
+ser.close()             
 
 
 
