@@ -6,8 +6,8 @@ print("connected to: " + ser.portstr)
 
 #Bucle principal
 while True:
-    line = ser.readline() #leer lineas con salto de carro
     if(ser.in_waiting > 0): #imprimir 
+        line = ser.readline() #leer lineas con salto de carro
         print(line)
 
 
